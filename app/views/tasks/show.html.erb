@@ -3,4 +3,9 @@
 <p><%= "completed: #{@task.completed}" %></p>
 
 <%= link_to "Go back", tasks_path %>
-<%# <%= link_to "Edit task", task_path(edit) %> %>
+<%= link_to "Edit task", edit_task_path %>
+
+<%= link_to "Delete task",
+  destroy_task_path,
+  data: { turbo_method: :delete, turbo_confirm: "Are you sure?" },
+  class: "btn btn-danger" %>
