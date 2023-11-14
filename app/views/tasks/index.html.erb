@@ -1,0 +1,6 @@
+<h1><%= "Rails Task Manager" %></h1>
+
+<% @tasks.each do |task| %>
+  <h3><%= link_to task.title, task_path(task) %></h3>
+  <p><%= "completed: #{task.completed}" %></p>
+<% end %>
